@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import 'config';
+
+// GLOBAL STYLES
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: $body-font;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 27px;
+}
+
+section{
+    padding: 1rem 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+img{
+    width: 100%;
+}
+
+input[type="text"]{
+    padding: .77rem 1.44rem;
+    margin-bottom: .52rem;
+    border: none;
+    border-radius: 8px;
+}
+
+h1,
+h2,
+h6{
+    font-family: $headings-font;
+    letter-spacing: unset;
+}
+
+h1{font-size: 1.88rem;}
+
+// UTILITIES
+
+.container{
+    width: 88%;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 130px;
+    height: 20px;
+}
+
+.section-2,
+.section-4{
+    background-color: hsl(207, 100%, 98%);
+    margin: 20rem 0;
+}
+
+// NAVIGATION STYLES
+
+nav{
+    margin: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a{
+        @extend %btn;
+        color: $pink;
+        background-color: #fff;
+        border: 1px solid $pink;
+    }
+
+    a:hover{
+        background-color: $pink;
+        color: #fff;
+    }
+
+}
+
+// HEADER STYLES
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .27rem;
+    a{
+        @extend %btn;
+        box-shadow: 4px 14px 33px 2px rgba(156, 156, 156, 0.479);
+        margin: 2rem 0;
+    }
+}
+
+// SECTION 1 STYLES
+
+.section-1__box{
+    padding: 4rem 0;
+
+    h1{
+        font-size: 4rem;
+        position: relative;
+
+    }
+
+    img{
+        position: absolute;
+        top: -200%;
+        width: 30px;
+        height: 30px;
+    }
+
+    span{
+        color: #737373;
+    }
+}
+
+// SECTION 2 = 'GROW TOGETHER' STYLES
+.section-2{
+    display: grid;
+    position: relative;
+    &__text{
+        order: 2;
+    }
+
+    &:before{
+        @extend %bg-before;
+        background: url('../images/bg-section-top-desktop-1.svg') center/cover no-repeat;
+    }
+    
+    &:after{
+        @extend %bg-after;
+        background: url('../images/bg-section-bottom-desktop-1.svg') center/cover no-repeat;
+    }
+}
+
+// SECTION 4 = 'YOUR USERS' STYLES
+
+.section-4{
+    display: grid;
+    position: relative;
+    margin-bottom: 0;
+
+    &__text{
+        order: 2;
+    }
+
+    &:before{
+        @extend %bg-before;
+        background: url('../images/bg-section-top-desktop-2.svg') center/cover no-repeat;
+    }
+    
+    &:after{
+        @extend %bg-after;
+        background: url('../images/bg-section-bottom-desktop-2.svg') center/cover no-repeat;
+    }
+}
+
+// SECTION 5 = 'READY TO BUILD YOUR COMMUNITY' STYLES
+
+.section-5{
+    margin: 10rem 0;
+    a{
+        @extend %btn;
+        box-shadow: 4px 14px 33px 2px rgba(156, 156, 156, 0.479);
+    }
+
+    a:hover{
+        color: $pink;
+        background-color: darken(#fff, 10%);
+    }
+}
+
+// FOOTER STYLES
+
+footer{
+    display: grid;
+    align-items: end;
+    background: url('../images/bg-footer-top-mobile.svg') top/100% 10% no-repeat;
+    text-align: left;
+    color: #fff;
+    
+    .footer__container{
+        background-color: hsl(192, 100%, 9%);
+        height: 92.7%;
+        padding: 3rem;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .footer__contact{
+        order: 2;
+        padding: 3rem 0;
+
+        div{
+            span{
+                vertical-align: middle;
+            }
+
+            img{
+                width: 22px;
+                margin-right: 1rem;
+                vertical-align: middle;
+            }
+        }
+
+        img{
+            color: #fff;
+        }
+    }
+
+    .footer__newsletter{
+        h6{
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        button{
+            @extend %btn;
+            border-radius: 8px;
+            padding: .77rem 1.44rem;
+            border: none;
+        }
+
+        &__form{
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
+}
+
+@import 'desktop';

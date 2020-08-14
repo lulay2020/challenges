@@ -1,0 +1,44 @@
+@media(min-width: 760px){
+    header p{
+        width: 50%;
+    }
+
+    .section-1{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .section-2,
+    .section-3,
+    .section-4{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin: 20rem 0;
+    }
+
+    .section-2,
+    .section-4{
+        background-color: hsl(207, 100%, 98%);
+
+        &__text{
+            order: initial;
+        }
+    }
+    
+    .section-3{
+        display: grid;
+    }
+
+    footer{
+        height: 75vh;
+        background: url('../images/bg-footer-top-desktop.svg') top/100% 30% no-repeat;
+        
+        .footer__container{
+            height: 70.5%;
+        }
+
+        .footer__newsletter{
+            order: 2;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+// VARIABLES
+$headings-font: 'Poppins', sans-serif; 
+$body-font: 'Open Sans', sans-serif;
+$pink: hsl(322, 100%, 66%);
+$dark-cyan: hsl(192, 100%, 9%);
+$pale-blue: hsl(207, 100%, 98%);
+
+// Margin & Padding
+
+$spaceamounts: (1,2,3,4,5);
+
+@each $space in $spaceamounts{
+    .m-#{$space}{
+        margin: #{$space}rem;
+    }
+
+    .my-#{$space}{
+        margin: #{$space}rem 0;
+    }
+
+    .p-#{$space}{
+        padding: #{$space}rem;
+    }
+
+    .py-#{$space}{
+        padding: #{$space}rem 0;
+    }
+}
+
+%btn{
+    display: inline-block;
+    padding: 6px 26px;
+    background-color: $pink;
+    color: #fff;
+    border-radius: 18px;
+    text-transform: capitalize;
+}
+
+%bg-before{
+    content: '';
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    top: -30%;
+}
+
+%bg-after{
+    content: '';
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+}

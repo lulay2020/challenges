@@ -1,0 +1,20 @@
+body{
+	overflow: hidden;
+}
+#shape{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	display: none;
+	position: relative;
+	box-shadow: 0px 0px 15px -4px black;
+}
+
+span{
+	font-weight: bolder;
+}
+
+body{
+	background-color: #3c3c3c;
+	color: #fff;
+}
